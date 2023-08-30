@@ -1,0 +1,4 @@
+app:
+  imageName: lorenzodagostinorad/next-example
+  service:
+    internalPort: 3000

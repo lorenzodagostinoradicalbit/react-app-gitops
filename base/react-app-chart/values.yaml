@@ -1,13 +1,17 @@
-app:  
+app:
+# Common Values
   imageName: lorenzodagostinorad/next-example
-  imageTag: latest
-  replica: 1
   service:
     internalPort: 3000
-    api:
-      endpoint: "service-go"
-      port: 3000
+
+# Env specific values
+  api:
+    endpoint: "service-go"
+    port: 3000
+  imageTag: latest
+  replica: 1
   resources: {}
 
 service:
+# Env specific values
   type: ClusterIP

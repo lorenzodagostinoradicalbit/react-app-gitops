@@ -27,8 +27,8 @@ spec:
             port: {{ .Values.app.service.internalPort | int }}
         env:
         - name: VERSION_API_ENDPOINT
-          value: {{ required "required api endpoint" .Values.app.service.api.endpoint }}
+          value: {{ required "required api endpoint" .Values.app.api.endpoint }}
         - name: VERSION_API_PORT
-          value: {{ required "required port" .Values.app.service.api.port }}
+          value: {{ required "required port" .Values.app.api.port }}
         resources:
 {{ toYaml .Values.app.resources | indent 10 }}

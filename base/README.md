@@ -1,0 +1,1 @@
+Here goes base Kustomization folders & Helm charts

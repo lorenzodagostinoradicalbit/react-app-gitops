@@ -1,0 +1,13 @@
+app:  
+  replica: 1
+  imageTag: latest
+  service:
+    api:
+      endpoint: "golang-version-api.be.svc"
+      port: 3000
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "250m"
+    limits:
+      memory: "128Mi"

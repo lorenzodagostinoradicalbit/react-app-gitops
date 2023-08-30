@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata: {{ $fullname := printf "%s" .Chart.Name | trunc 63 | trimSuffix "-" }}
+  name: {{ $fullname }}
+spec:
+  selector:
+    app: {{ $fullname }}
+  ports:
+    - protocol: TCP
+      port: {{ .Values.app.service.internalPort | int }}
+      targetPort: {{ .Values.app.service.internalPort | int }}
+  type: {{ .Values.service.type }}

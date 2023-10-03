@@ -1,9 +1,4 @@
-app:  
-  replica: 1
-  imageTag: latest
-  api:
-    endpoint: "service-go"
-    port: 3000
+app:
   resources:
     requests:
       memory: "64Mi"

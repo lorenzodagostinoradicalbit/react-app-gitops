@@ -2,3 +2,6 @@ app:
   imageName: lorenzodagostinorad/next-example
   service:
     internalPort: 3000
+  api:
+    endpoint: "service-go"
+    port: 3000
